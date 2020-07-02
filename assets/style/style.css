@@ -121,7 +121,7 @@ div.tema.premium .linkMenu {
 /* --------------PREMIUM MODE---------------- */
 
 /* --------------LIGHT MODE---------------- */
-.light {
+/* .light {
 	background-color: var(--bg-primary-color);
 }
 
@@ -142,7 +142,7 @@ div.tema.light .themeTxt {
 }
 div.tema.light .linkMenu {
 	border-right: var(--xxs) solid var(--border-gray-light);
-}
+} */
 /* --------------LIGHT MODE---------------- */
 
 a {

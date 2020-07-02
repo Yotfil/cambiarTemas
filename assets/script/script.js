@@ -52,6 +52,9 @@ const cargarTema = ()=>{
     if(temaGuardado === btnTema.id){
         tema.classList.add(btnTema.id)
         btnTema.classList.add('selected')
+    }else{
+        tema.className = 'tema'
+        btnTema.classList.add('selected')
     }
 }
 mostrarMenuTemas()
