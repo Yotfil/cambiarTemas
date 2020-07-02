@@ -46,20 +46,11 @@ const guardarEnStorage = (targetTema)=>{
 
 const cargarTema = ()=>{
     const temaGuardado = localStorage.getItem('tema')
+
     const btnTema = document.getElementById(temaGuardado)
-    console.log(temaGuardado)
-    console.log(btnTema)
-    if(temaGuardado === 'pink'){
-        tema.classList.add('pink')
-        btnTema.classList.add('selected')
-    }else if(temaGuardado === 'dark'){
-        tema.classList.add('dark')
-        btnTema.classList.add('selected')
-    }else if(temaGuardado === 'premium'){
-        tema.classList.add('premium')
-        btnTema.classList.add('selected')
-    }else if(temaGuardado === 'light'){
-        tema.className = 'tema'
+
+    if(temaGuardado === btnTema.id){
+        tema.classList.add(btnTema.id)
         btnTema.classList.add('selected')
     }
 }
@@ -131,6 +122,20 @@ cargarTema()
 //     //     localStorage.setItem('tema', 'light')
 //     // }
 // }
+
+    // if(temaGuardado === 'pink'){
+    //     tema.classList.add('pink')
+    //     btnTema.classList.add('selected')
+    // }else if(temaGuardado === 'dark'){
+    //     tema.classList.add('dark')
+    //     btnTema.classList.add('selected')
+    // }else if(temaGuardado === 'premium'){
+    //     tema.classList.add('premium')
+    //     btnTema.classList.add('selected')
+    // }else if(temaGuardado === 'light'){
+    //     tema.className = 'tema'
+    //     btnTema.classList.add('selected')
+    // }
 
 
 
