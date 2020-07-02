@@ -27,8 +27,8 @@ const cambiarTemas = ()=>{
         console.log(targetTema)
 
         tema.className = 'tema '  + targetTema
-        document.querySelector('.selected').classList.remove('selected')
-        bordeTarget.classList.add('selected')
+        // document.querySelector('.selected').classList.remove('selected')
+        // bordeTarget.classList.add('selected')
         guardarEnStorage(targetTema)
     }
 
@@ -47,21 +47,32 @@ const guardarEnStorage = (targetTema)=>{
 const cargarTema = ()=>{
     const temaGuardado = localStorage.getItem('tema')
 
-    const btnTema = document.getElementById(temaGuardado)
+    // const btnTema = document.getElementById(temaGuardado)
 
-    if(temaGuardado === btnTema.id){
-        tema.classList.add(btnTema.id)
+        if(temaGuardado === 'pink'){
+        tema.classList.add('pink')
         btnTema.classList.add('selected')
-    }else{
+    }else if(temaGuardado === 'dark'){
+        tema.classList.add('dark')
+        btnTema.classList.add('selected')
+    }else if(temaGuardado === 'premium'){
+        tema.classList.add('premium')
+        btnTema.classList.add('selected')
+    }else if(temaGuardado === 'light'){
         tema.className = 'tema'
         btnTema.classList.add('selected')
     }
+
+    // if(temaGuardado === btnTema.id){
+    //     tema.classList.add(btnTema.id)
+    //     btnTema.classList.add('selected')
+    // }
 }
 mostrarMenuTemas()
 
 cambiarTemas()
-
 cargarTema()
+
 
 
 // themeTxt.addEventListener('mouseenter', ()=>{
